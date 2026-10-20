@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Menu — Claude Monet{% endblock %}
+{% block content %}
+<main class="page">
+  {% for title, items in [("Dessert", desserts), ("Salty", salty)] %}
+  <h2>{{ title }}</h2>
+  <ul class="dishes">
+    {% for name, price, icon in items %}
+    <li>
+      <div class="photo"><img src="{{ icon }}" alt="{{ name }}" loading="lazy" referrerpolicy="no-referrer"></div>
+      <p class="name">{{ name }}</p>
+      <p class="price">{{ price }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</main>
+{% endblock %}
