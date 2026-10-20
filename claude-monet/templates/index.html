@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<main class="hero">
+  <div class="hero-text">
+    <h1>Welcome to our restaurant</h1>
+    <p>Discover a world of taste and comfort</p>
+    <a class="btn" href="{{ url_for('contact') }}">Reserve Your Table
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M8 12h8m-3-3 3 3-3 3"/></svg>
+    </a>
+  </div>
+  <div class="hero-img"><img src="https://i.pinimg.com/736x/00/75/31/0075316f4057f5c6ef1e6112fae9c286.jpg" alt="Fresh croissants" referrerpolicy="no-referrer"></div>
+</main>
+{% endblock %}

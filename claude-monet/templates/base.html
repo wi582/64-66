@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Claude Monet{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+{% set ep = request.endpoint %}
+<header class="bar">
+  <a class="brand" href="{{ url_for('home') }}">Claude Monet</a>
+  <nav>
+    <a href="{{ url_for('home') }}" {% if ep == 'home' %}class="on"{% endif %}>Home</a>
+    <a href="{{ url_for('menu') }}" {% if ep == 'menu' %}class="on"{% endif %}>Menu</a>
+    <a href="{{ url_for('about') }}" {% if ep == 'about' %}class="on"{% endif %}>About Us</a>
+    <a href="{{ url_for('contact') }}" {% if ep == 'contact' %}class="on"{% endif %}>Contact</a>
+  </nav>
+  <a class="user" href="{{ url_for('login') }}" aria-label="Sign in">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+  </a>
+</header>
+{% block content %}{% endblock %}
+</body>
+</html>

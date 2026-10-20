@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}About Us — Claude Monet{% endblock %}
+{% block content %}
+<main class="page">
+  <h2>Chefs</h2>
+  <ul class="chefs">
+    {% for role, name, icon in chefs %}
+    <li>
+      <div class="photo">{{ icon }}</div>
+      <p class="name">{{ role }}<br>{{ name }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+  <blockquote>
+    Every action we take echoes through the lives of many. And every action of others
+    changes us in turn. Before you take your next step, consider who you'll impact,
+    and how you'll be changed.<br>Thought about it? Then move forward!
+  </blockquote>
+</main>
+{% endblock %}
