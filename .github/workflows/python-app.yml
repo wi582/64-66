@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./claude-monet      # ← указываем папку проекта
+        working-directory: ./claude-monet     
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -54,7 +54,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./claude-monet              # ← указываем папку проекта
+          context: ./claude-monet              
           push: true
           tags: |
             ghcr.io/${{ github.repository }}:latest
