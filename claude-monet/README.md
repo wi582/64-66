@@ -8,3 +8,6 @@ Tests:        pytest
 Docker:       docker build -t claude-monet . && docker run -p 5000:5000 claude-monet
 Git / CI:     git init && git add . && git commit -m "Initial" && git branch -M main
               git remote add origin https://github.com/<user>/claude-monet.git && git push -u origin main
+              
+## Обновление
+Добавлен раздел для демонстрации Pull Request.
