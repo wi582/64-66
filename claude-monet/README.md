@@ -1,4 +1,7 @@
 # Claude Monet — restaurant website (Flask)
+Проект ресторана
+#Новая функция
+Раздел "О нас"
 
 Local run:    pip install -r requirements.txt && python app.py   (http://localhost:5000)
 Tests:        pytest
